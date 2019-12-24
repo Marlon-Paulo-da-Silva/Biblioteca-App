@@ -30,25 +30,31 @@ class _HomePageState extends State<HomePage> {
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        padding: EdgeInsets.only(top: 42),
+        padding: EdgeInsets.only(top: 42, left: 24),
         child: Column(
           children: <Widget>[
             Row(
               children: <Widget>[
                 Padding(
                   padding: const EdgeInsets.only(
-                    left: 24,
                     right: 24,
                   ),
                   child: Text(
                     "Biblioteca",
                     style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 26,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
-                Text("Recomendados"),
+                Text(
+                  "Recomendados",
+                  style: TextStyle(
+                    color: Colors.grey[500],
+                    fontWeight: FontWeight.bold,
+                    fontSize: 14,
+                  ),
+                ),
               ],
             ),
             Container(
@@ -75,7 +81,7 @@ class _HomePageState extends State<HomePage> {
                           style: TextStyle(
                             color: index == _selectedIndex
                                 ? Colors.white
-                                : Colors.black,
+                                : Colors.grey[500],
                           ),
                         ),
                       ),
