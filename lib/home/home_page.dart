@@ -97,7 +97,8 @@ class _HomePageState extends State<HomePage> {
               itemBuilder: (context, index) {
                 return BookWidget();
               },
-            ),
+            )
+          ],
         ),
       ),
     );
