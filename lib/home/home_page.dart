@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -15,6 +16,13 @@ class _HomePageState extends State<HomePage> {
   ];
 
   int _selectedIndex = 0;
+
+  @override
+  void initState() {
+    SystemChrome.setEnabledSystemUIOverlays([]);
+
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
