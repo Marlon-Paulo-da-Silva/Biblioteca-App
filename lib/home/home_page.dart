@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:librarybloc/home/book_widget.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -90,7 +91,13 @@ class _HomePageState extends State<HomePage> {
                 },
               ),
             ),
-          ],
+            ListView.builder(
+              itemCount: categories.length,
+              shrinkWrap: true,
+              itemBuilder: (context, index) {
+                return BookWidget();
+              },
+            ),
         ),
       ),
     );
